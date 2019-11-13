@@ -1,3 +1,5 @@
+package p1;
+
 public class studednt {
 public static final int t_dars = 3;
 public static final int t_std = 3;

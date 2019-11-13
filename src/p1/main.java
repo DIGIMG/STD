@@ -1,3 +1,5 @@
+package p1;
+
 import java.util.Scanner;
 public class main {
     public static final int t_dars = 3;
@@ -7,20 +9,22 @@ public class main {
 
     public static void main(String[] args) {
         String name;
-        double[] number= new double[t_std];
+        float[] number= new float[t_std];
         Scanner input = new Scanner(System.in);
-        studednt[] std= new studednt[t_std];
+         studednt[] std= new studednt[t_std];
+
 
         for(int q=0;q<t_std;q++) /* دریافت نام دانش آموز */
         {
             System.out.println("Please Enter name "+q+1);
             name = input.next();
+            std[q] = new studednt();
             std[q].setname(name);
 
             for(int w=0;w<t_dars;w++) /* دریافت نمرات دروس */
             {
                 System.out.println("Please Enter Number"+ w+1);
-                number[w] = input.nextDouble();
+                number[w] = Float.parseFloat(input.next());
                 std[q].setnumber(number[w]);
             }
 
